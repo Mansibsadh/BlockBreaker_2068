@@ -111,8 +111,8 @@ function moveBall(){
     if(canvas.width<=ball.x || ball.x<0){ball.dx=ball.dx*(-1);}
 
     //Surrounding wall collision detection(y-axis)
-    //top and bottom walls
-    if(canvas.height<=ball.y || ball.y<0){ball.dy=ball.dy*(-1);}
+    //top and bottom walls 
+    if(canvas.height<=ball.y || ball.y<0 || (paddle.y<=ball.y+6 && paddle.y<=ball.y-12 && ball.x<=paddle.x+(40) && ball.x>=paddle.x-(40))){ball.dy=ball.dy*(-1);}
 
    
 
